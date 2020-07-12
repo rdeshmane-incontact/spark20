@@ -52,7 +52,7 @@ h6 {
 .market-header .navbar {
     padding-left: 3rem;
     padding-right: 3rem;
-    border: 6px solid #000000;
+    border: 6px solid rgb(0, 124, 190);
     -webkit-box-shadow: inset 0px 0px 0px 1px #000000;
     -moz-box-shadow: inset 0px 0px 0px 1px #000000;
     box-shadow: inset 0px 0px 0px 1px #000000;
