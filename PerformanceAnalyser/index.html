@@ -1,0 +1,166 @@
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Site Metas -->
+    <title>Markedia - Marketing Blog Template</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Design fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet"> 
+    
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- FontAwesome Icons core CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Responsive styles for this template -->
+    <link href="css/responsive.css" rel="stylesheet">
+
+
+    <!-- Version Marketing CSS for this template -->
+    <link href="css/version/marketing.css" rel="stylesheet">
+    <link rel="icon" type="image/png" ng-href="images/favicon-16x16.png" href="images/favicon-16x16.png">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script type="application/javascript">
+        var dataResult=[ { "name": "authentication-manager", "containerCl": 1536, "container": 3072, "jvm": "Xmx=1330m", "number": 4, "baseLineResult.cpu.average": 43, "baseLineResult.cpu.maximum": 66, "baseLineResult.memory.average": 30.2, "baseLineResult.memory.maximum": 32, "baseLineResult.maxUsedHeap": 481, "baseLineResult.maxThread": 271, "currentRunResult.cpu.average": 41.31, "currentRunResult.cpu.maximum": 81.68, "currentRunResult.memory.average": 31.2, "currentRunResult.memory.maximum": 32.36, "currentRunResult.maxUsedHeap": 481.1, "currentRunResult.maxThread": 279 }, {"name": "authorization-manager", "containerCl": 1536, "container": 3072, "jvm": "Xmx=1330m", "number": 4, "baseLineResult.cpu.average": 43, "baseLineResult.cpu.maximum": 66, "baseLineResult.memory.average": 30.2, "baseLineResult.memory.maximum": 32, "baseLineResult.maxUsedHeap": 481, "baseLineResult.maxThread": 271, "currentRunResult.cpu.average": 41.31, "currentRunResult.cpu.maximum": 81.68, "currentRunResult.memory.average": 31.2, "currentRunResult.memory.maximum": 32.36, "currentRunResult.maxUsedHeap": 481.1, "currentRunResult.maxThread": 279 }];
+        var columns = ["name", "containerCl", "container", "jvm", "number", "baseLineResult.cpu.average", "baseLineResult.cpu.maximum", "baseLineResult.memory.average", "baseLineResult.memory.maximum", "baseLineResult.maxUsedHeap", "baseLineResult.maxThread", "currentRunResult.cpu.average", "currentRunResult.cpu.maximum", "currentRunResult.memory.average", "currentRunResult.memory.maximum", "currentRunResult.maxUsedHeap", "currentRunResult.maxThread"];
+    </script>
+
+</head>
+<body>
+
+    <div id="wrapper">
+        <header class="market-header header">
+            <div class="container-fluid">
+                <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/svg/nice-ic-white.svg" alt=""></a>
+                </nav>
+            </div><!-- end container-fluid -->
+
+        </header><!-- end market-header -->
+        <div class="menuBar">
+        <div class="tab">
+            <button class="tablinks" onclick="openContent(event,'performance')">Performance</button>
+            <button class="tablinks" onclick="openContent(event,'trends')">Trends</button>
+        </div>
+        </div>
+        <div class="content">
+        <div id = "performance" class="tabcontent performancetabcontent">
+            <div class = "omnibar"></div>
+            <div class="performanceTab">
+                <table>
+                    <tr>
+                <td><button class="tablinks" onclick="openContent(event,'microservice')">Microservice</button></td>
+                <td><button class="tablinks" onclick="openContent(event,'gatlin')">Gatlin Report</button></td></tr>
+                </table>
+            </div>
+            <div id = "microservice" class="tabcontent">
+                Microservice
+            </div>
+            <div id = "gatlin" class="tabcontent">
+                Gatlin Report
+            </div>
+        </div>
+
+        <div id = "trends" class="tabcontent">
+            Trends
+        </div>
+        </div>
+        <script>
+            function openContent(event, performance) {
+                // Declare all variables
+                var i, tabcontent, tablinks;
+
+                // Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                // Show the current tab, and add an "active" class to the link that opened the tab
+                document.getElementById(performance).style.display = "block";
+                event.currentTarget.className += " active";
+            }
+
+
+        </script>
+        <!--<div>
+            <table id="resultTable">
+
+
+            </table>
+            <script>
+                var table=$("<table/>");
+                table[0].border = "1";
+                var columnCount = 17;
+                var row =$(table[0].insertRow(-1));
+                for (var i=0 ;i<dataResult.length;i++)
+                {
+                    row = $(table[0].insertRow(-1));
+                    for (var j = 0; j < columnCount; j++) {
+                        var cell = $("<td/>");
+                        cell.html(dataResult[i][columns[j]]);
+                        switch(columns[j]){
+                            case "currentRunResult.cpu.average":
+                                if(dataResult[i][columns[j]] < dataResult[i]["baseLineResult.cpu.average"]) {
+                                   // cell.style.backgroundColor="red";
+                                    cell.addClass("greenClass");
+                                }else if(dataResult[i][columns[j]] > dataResult[i]["baseLineResult.cpu.average"]){
+                                    cell.addEventListener("redClass");
+                                }
+                            case "baseLineResult.cpu.maximum":
+                                if (dataResult[i][columns[j]]> dataResult[i]["baseLineResult.cpu.maximum"]+10)
+                                    cell.addClass("redClass");
+                        }
+                        row.append(cell);
+                    }
+                }
+
+                var dataTable=$("#resultTable");
+                dataTable.html("");
+                dataTable.append(table);
+            </script>
+        </div>-->
+
+
+
+    </div><!-- end wrapper -->
+
+    <!-- Core JavaScript
+    ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+</html>
