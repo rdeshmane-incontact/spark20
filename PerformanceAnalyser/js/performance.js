@@ -5,6 +5,8 @@ $("#microservice").load("microservice.html");
 $("#component").load("component.html");
 $("#gatling").load("gatling.html");
 $("#trends").load("trend.html");
+$("#configuration").load("configuration.html");
+$("#performance").load("performance.html");
 
 var lastRun = {};
 

@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Site Metas -->
-<title>Markedia - Marketing Blog Template</title>
+<title>CXone - Performance Analyzer</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
@@ -60,16 +60,16 @@
             <button id="dashboardTab" class="tablinks" onclick="openContent(event,'dashboard')">Dashboard</button>
             <button class="tablinks" onclick="openTab(event,'performance', 'L1')">Performance</button>
             <button class="tablinks" onclick="openTab(event,'trends', 'L1')">Trends</button>
+            <button class="tablinks" onclick="openTab(event,'configuration', 'L1')">Configuration</button>
         </div>
     </div>
     <div class="content">
-        <div id="dashboard" class="tabcontent">
-        </div>
+        <div id="dashboard" class="tabcontent"></div>
         <div id="performance" class="tabcontent">
             <div class="performanceTab">
                 <div class="row top-container">
                     <div class="col-md-6">
-                        <h1 class="page-title">Performance</h1>
+                        <h1 class="page-title">PERFORMANCE</h1>
                     </div>
                     <div class="col-md-6">
                         <div class="pull-right">
@@ -99,40 +99,12 @@
                     </tr>
                 </table>
             </div>
-            <div id="microservice" class="performancetabcontent">
-
-            </div>
-            <div id="component" class="performancetabcontent">
-
-
-            </div>
-            <div id="gatling" class="performancetabcontent">
-
-            </div>
+            <div id="microservice" class="performancetabcontent"></div>
+            <div id="component" class="performancetabcontent"></div>
+            <div id="gatling" class="performancetabcontent"></div>
         </div>
-
-        <div id="trends" class="tabcontent">
-
-			<div class="row top-container">
-				<div class="col-md-6">
-					<h1 class="page-title">Trends</h1>
-				</div>
-				<div class="col-md-6">
-					<div class="pull-right">
-						<label for="service">Service</label>
-
-						<select name="Service" id="service"  onchange="serviceChangeFunction(this)">
-							<option value="authentication-manager">Authentication Manager</option>
-							<option value="authorization-manager">Authorization Manager</option>
-							<option value="user-manager">User Manager</option>
-						</select>
-					</div>
-				</div>
-			</div>
-			<br/>
-			<br/>
-            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-        </div>
+        <div id="trends" class="tabcontent"></div>
+        <div id="configuration" class="tabcontent"></div>
     </div>
 
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
