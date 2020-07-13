@@ -70,7 +70,7 @@ var componentBaseline = {
 columns= ["name", "Baseline", "CurrentRun"]
 
 
-$("#component").click(function getComponentDetails() {
+$("#componentTab").click(function getComponentDetails() {
     var table = $("<table/>");
     table[0].border = "1";
     var columnCount = 3;
@@ -142,3 +142,9 @@ $("#component").click(function getComponentDetails() {
     dataTable.html("");
     dataTable.append(table);
 })
+
+function createCell(row,value) {
+    var cell = $("<td/>");
+    cell.html(value);
+    row.append(cell);
+}

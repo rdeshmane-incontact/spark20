@@ -1,7 +1,6 @@
 var gatlingResult =[
     {"Transactions":"/ Servicelogin","Average hit rate(TPS)":"39.13","90th Percentile Response Time(ms)":"253","Total Transactions":"141054","Passed Transactions":"141052","Failed Transactions":"2","Failure Rate(%)":"0"},
-    {"Transactions":"/ login","Average hit rate(TPS)":"86.99","90th Percentile Response Time(ms)":"303","Total Transactions":"313600","Passed Transactions":"307645","Failed Transactions":"5955","Failure Rate(%)":"1.9"},
-    {"Transactions":"/ getAllRolesEmployee","Average hit rate(TPS)":"5.17","90th Percentile Response Time(ms)":"32","Total Transactions":"18618","Passed Transactions":"18225","Failed Transactions":"393","Failure Rate(%)":"2.11"}
+    {"Transactions":"/ login","Average hit rate(TPS)":"86.99","90th Percentile Response Time(ms)":"303","Total Transactions":"313600","Passed Transactions":"307645","Failed Transactions":"5955","Failure Rate(%)":"1.9"}
 ]
 
 var gatlingBaseline =
@@ -14,7 +13,7 @@ var gatlingBaseline =
 var gatlingColumns = ["Transactions","Average hit rate(TPS)","90th Percentile Response Time(ms)","Total Transactions","Passed Transactions","Failed Transactions","Failure Rate(%)"];
 
 
-$("#gatling").click(function getGatlingRunDetails() {
+$("#gatlingTab").click(function getGatlingRunDetails() {
     var table = $("<table/>");
     table[0].border = "1";
     var columnCount = 7;
@@ -50,3 +49,9 @@ $("#gatling").click(function getGatlingRunDetails() {
     dataTable.html("");
     dataTable.append(table);
 })
+
+function createCell(row,value) {
+    var cell = $("<td/>");
+    cell.html(value);
+    row.append(cell);
+}
