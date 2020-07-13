@@ -1,107 +1,71 @@
 <html lang="en">
 
-    <!-- Basic -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!-- Site Metas -->
-    <title>Markedia - Marketing Blog Template</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    
-    <!-- Design fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet"> 
-    
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+<!-- Basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- FontAwesome Icons core CSS -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+<!-- Mobile Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet">
+<!-- Site Metas -->
+<title>Markedia - Marketing Blog Template</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
 
-    <!-- Responsive styles for this template -->
-    <link href="css/responsive.css" rel="stylesheet">
+<!-- Design fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.css" rel="stylesheet">
+
+<!-- FontAwesome Icons core CSS -->
+<link href="css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="style.css" rel="stylesheet">
+
+<!-- Responsive styles for this template -->
+<link href="css/responsive.css" rel="stylesheet">
 
 
-    <!-- Version Marketing CSS for this template -->
-    <link href="css/version/marketing.css" rel="stylesheet">
-    <link rel="icon" type="image/png" ng-href="images/favicon-16x16.png" href="images/favicon-16x16.png">
+<!-- Version Marketing CSS for this template -->
+<link href="css/version/marketing.css" rel="stylesheet">
+<link rel="icon" type="image/png" ng-href="images/favicon-16x16.png" href="images/favicon-16x16.png">
 
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-        <script>
-            window.onload = function () {
+<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-                var chart = new CanvasJS.Chart("chartContainer", {
-                    animationEnabled: true,
-                    theme: "light2",
-                    title:{
-                        text: "Simple Line Chart"
-                    },
-                    axisY:{
-                        includeZero: false
-                    },
-                    data: [{
-                        type: "line",
-                        indexLabelFontSize: 16,
-                        dataPoints: [
-                            { y: 450 },
-                            { y: 414},
-                            { y: 520, indexLabel: "\u2191 highest",markerColor: "red", markerType: "triangle" },
-                            { y: 460 },
-                            { y: 450 },
-                            { y: 500 },
-                            { y: 480 },
-                            { y: 480 },
-                            { y: 410 , indexLabel: "\u2193 lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
-                            { y: 500 },
-                            { y: 480 },
-                            { y: 510 }
-                        ]
-                    }]
-                });
-                chart.render();
-
-            }
-        </script>
 </html>
-    <body>
+<body>
 
-    <div id="wrapper">
-        <header class="market-header header">
-            <div class="container-fluid">
-                <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/svg/nice-ic-white.svg" alt=""></a>
-                </nav>
-            </div><!-- end container-fluid -->
+<div id="wrapper">
+    <header class="market-header header">
+        <div class="container-fluid">
+            <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                        data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="images/svg/nice-ic-white.svg" alt=""></a>
+            </nav>
+        </div><!-- end container-fluid -->
 
-        </header><!-- end market-header -->
-        <div class="menuBar">
+    </header><!-- end market-header -->
+    <div class="menuBar">
         <div class="tab">
-            <button class="tablinks" onclick="openContent(event,'dashboard')">Dashboard</button>
-            <button class="tablinks" onclick="openContent(event,'performance')">Performance</button>
-            <button class="tablinks" onclick="openContent(event,'trends')">Trends</button>
+            <button id="dashboardTab" class="tablinks" onclick="openContent(event,'dashboard')">Dashboard</button>
+            <button class="tablinks" onclick="openTab(event,'performance', 'L1')">Performance</button>
+            <button class="tablinks" onclick="openTab(event,'trends', 'L1')">Trends</button>
         </div>
+    </div>
+    <div class="content">
+        <div id="dashboard" class="tabcontent">
         </div>
-        <div class="content">
-            <div id="dashboard"> Dashboard</div>
-        <div id = "performance" class="tabcontent performancetabcontent">
-            <div class = "omnibar"></div>
+        <div id="performance" class="tabcontent">
             <div class="performanceTab">
                 <div class="row top-container">
                     <div class="col-md-6">
@@ -112,10 +76,11 @@
                             <label for="PerformanceRuns">Choose a run</label>
 
                             <select name="runs" id="PerformanceRuns">
-                                <option value="run1">Jul 8, 2020 1:04:09 PM  Jul 8, 2020 2:06:09 PM (1h 2m )</option>
-                                <option value="run2">Jul 6, 2020 3:48:33 PM  Jul 6, 2020 4:49:21 PM (1h 48s)</option>
-                                <option value="run3">Jul 1, 2020 12:06:29 PM  Jul 1, 2020 1:11:28 PM (1h 4m 59s)</option>
-                                <option value="run4">Jun 29, 2020 4:51:06 PM  Jun 29, 2020 6:00:04 PM (1h 8m 58s)</option>
+                                <option value="run1" selected>Jul 8, 2020 1:04:09 PM Jul 8, 2020 2:06:09 PM (1h 2m )</option>
+                                <option value="run2">Jul 6, 2020 3:48:33 PM Jul 6, 2020 4:49:21 PM (1h 48s)</option>
+                                <option value="run3">Jul 1, 2020 12:06:29 PM Jul 1, 2020 1:11:28 PM (1h 4m 59s)</option>
+                                <option value="run4">Jun 29, 2020 4:51:06 PM Jun 29, 2020 6:00:04 PM (1h 8m 58s)
+                                </option>
                             </select>
                         </div>
                     </div>
@@ -126,53 +91,65 @@
                             <button class="tablinks" onclick="openTab(event,'microservice','L2')">Microservice</button>
                         </td>
                         <td>
-                            <button class="tablinks" onclick="openContent(event,'components','L2')">Components</button>
+                            <button class="tablinks" onclick="openTab(event,'component','L2')">Components</button>
                         </td>
                         <td>
-                            <button class="tablinks" onclick="openTab(event,'gatlin', 'L2')">Gatlin Report</button>
+                            <button class="tablinks" onclick="openTab(event,'gatling', 'L2')">Gatlin Report</button>
                         </td>
                     </tr>
                 </table>
             </div>
-            <div id = "microservice" class="tabcontent">
-                Microservice
-                <div>
-                    <table id="resultTable">
+            <div id="microservice" class="performancetabcontent">
 
-
-                    </table>
-                    </div>
             </div>
-            <div id = "gatlin" class="tabcontent">
-                Gatlin Report
+            <div id="component" class="performancetabcontent">
+
+
+            </div>
+            <div id="gatling" class="performancetabcontent">
+
             </div>
         </div>
 
-        <div id = "trends" class="tabcontent">
-            Trends
+        <div id="trends" class="tabcontent">
+
+			<div class="row top-container">
+				<div class="col-md-6">
+					<h1 class="page-title">Trends</h1>
+				</div>
+				<div class="col-md-6">
+					<div class="pull-right">
+						<label for="service">Service</label>
+
+						<select name="Service" id="service"  onchange="serviceChangeFunction(this)">
+							<option value="authentication-manager">Authentication Manager</option>
+							<option value="authorization-manager">Authorization Manager</option>
+							<option value="user-manager">User Manager</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<br/>
+			<br/>
             <div id="chartContainer" style="height: 300px; width: 100%;"></div>
         </div>
-        </div>
+    </div>
 
-        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-
-
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 
+</div><!-- end wrapper -->
 
-    </div><!-- end wrapper -->
+<!-- Core JavaScript
+================================================== -->
+<script src="js/jquery.min.js"></script>
+<script src="js/tether.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/performance.js"></script>
+<script src="js/trend.js"></script>
+<script src="js/microservice.js"></script>
 
-    <!-- Core JavaScript
-    ================================================== -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/tether.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/animate.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/performance.js"></script>
-
-
-
-
-    </body>
+</body>
 </html>
