@@ -1,5 +1,3 @@
-
-
 $("#dashboard").load("dashboard.html");
 $("#microservice").load("microservice.html");
 $("#component").load("component.html");
@@ -12,12 +10,12 @@ var lastRun = {};
 
 function openTab(event, performance, type) {
     if (type === "L1")
-        openContent(event, performance, 'tabcontent');
-    else (type === "L2")
-    openContent(event, performance, 'performancetabcontent');
+        openContent(event, performance, 'tabcontent', 'tablinks');
+    else if (type === "L2")
+        openContent(event, performance, 'performancetabcontent', 'performancetablinks');
 }
 
-function openContent(event, performance, tabclass) {
+function openContent(event, tabName, tabclass, tabLinkClass) {
     // Declare all variables
     var i, tabcontent, tablinks;
 
@@ -28,28 +26,19 @@ function openContent(event, performance, tabclass) {
     }
 
     // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
+    tablinks = document.getElementsByClassName(tabLinkClass);
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
 
     // Show the current tab, and add an "active" class to the link that opened the tab
-    document.getElementById(performance).style.display = "block";
-    event.currentTarget.className += " active";
+    document.getElementById(tabName).style.display = "block";
+    if (!event.currentTarget)
+        $("#" + tabName + "Tab").addClass("active");
+    else
+        event.currentTarget.className += " active";
 }
 
-
-
-function createCell(row,value) {
-    var cell = $("<td/>");
-    cell.html(value);
-    row.append(cell);
-}
-
-
-$("#dashboardTab").click(function getLastRunDetails() {
-    lastRun = {"runBy": "Abc pqr", "runDate": "Jul 8, 2020 1:04:09 PM Jul 8, 2020 2:06:09 PM (1h 2m )", "decision": "Success"};
-    $("#runBy").text("Run By      : " + lastRun.runBy);
-    $("#runDate").text("Run Date    : " + lastRun.runDate);
-    $("#decision").text("Result       : " + lastRun.decision);
+$(document).ready(function () {
+    $("#dashboardTab").click();
 });

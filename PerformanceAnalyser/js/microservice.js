@@ -81,4 +81,10 @@ function loadTable() {
     dataTable.append(table);
 
 }
-$("microservice").click(loadTable());
+
+function createCell(row,value) {
+    var cell = $("<td/>");
+    cell.html(value);
+    row.append(cell);
+}
+$("#microserviceTab").click(loadTable());
