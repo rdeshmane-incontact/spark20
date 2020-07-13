@@ -122,9 +122,15 @@
                 </div>
                 <table>
                     <tr>
-                        <td><button class="tablinks" onclick="openContent(event,'microservice')">Microservice</button></td>
-                        <td><button class="tablinks" id="components" onclick="openContent(event,'components')">Components</button></td>
-                        <td><button class="tablinks" onclick="openContent(event,'gatling')">Gatling Report</button></td>
+                        <td>
+                            <button class="tablinks" onclick="openTab(event,'microservice','L2')">Microservice</button>
+                        </td>
+                        <td>
+                            <button class="tablinks" onclick="openContent(event,'components','L2')">Components</button>
+                        </td>
+                        <td>
+                            <button class="tablinks" onclick="openTab(event,'gatlin', 'L2')">Gatlin Report</button>
+                        </td>
                     </tr>
                 </table>
             </div>
