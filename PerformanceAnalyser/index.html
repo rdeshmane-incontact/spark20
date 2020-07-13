@@ -101,22 +101,31 @@
         <div class="content">
             <div id="dashboard"> Dashboard</div>
         <div id = "performance" class="tabcontent performancetabcontent">
-            <div class = "omnibar">
-
-                <label for="omnibar">omnibar</label>
-
-                <select name="omnibar" id="omnibar">
-                    <option value="authentication-manager">Authentication Manager</option>
-                    <option value="authorization-manager">Authorization Manager</option>
-                    <option value="user-manager">User Manager</option>
-                </select>
-
-            </div>
+            <div class = "omnibar"></div>
             <div class="performanceTab">
+                <div class="row top-container">
+                    <div class="col-md-6">
+                        <h1 class="page-title">Performance</h1>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="pull-right">
+                            <label for="PerformanceRuns">Choose a run</label>
+
+                            <select name="runs" id="PerformanceRuns">
+                                <option value="run1">Jul 8, 2020 1:04:09 PM  Jul 8, 2020 2:06:09 PM (1h 2m )</option>
+                                <option value="run2">Jul 6, 2020 3:48:33 PM  Jul 6, 2020 4:49:21 PM (1h 48s)</option>
+                                <option value="run3">Jul 1, 2020 12:06:29 PM  Jul 1, 2020 1:11:28 PM (1h 4m 59s)</option>
+                                <option value="run4">Jun 29, 2020 4:51:06 PM  Jun 29, 2020 6:00:04 PM (1h 8m 58s)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
                 <table>
                     <tr>
-                <td><button class="tablinks" onclick="openContent(event,'microservice')">Microservice</button></td>
-                <td><button class="tablinks" onclick="openContent(event,'gatlin')">Gatlin Report</button></td></tr>
+                        <td><button class="tablinks" onclick="openContent(event,'microservice')">Microservice</button></td>
+                        <td><button class="tablinks" onclick="openContent(event,'components')">Components</button></td>
+                        <td><button class="tablinks" onclick="openContent(event,'gatling')">Gatling Report</button></td>
+                    </tr>
                 </table>
             </div>
             <div id = "microservice" class="tabcontent">

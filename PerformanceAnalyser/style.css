@@ -222,6 +222,11 @@ a {
     border-bottom: 0;
 }
 
+.page-title {
+    padding: 0 !important;
+    margin-top: 0 !important;
+}
+
 .header .dropdown-item span {
     position: absolute;
     right: 20px;
