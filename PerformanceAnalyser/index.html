@@ -118,18 +118,29 @@
         </div>
 
         <div id="trends" class="tabcontent">
-            Trends
+
+			<div class="row top-container">
+				<div class="col-md-6">
+					<h1 class="page-title">Trends</h1>
+				</div>
+				<div class="col-md-6">
+					<div class="pull-right">
+						<label for="service">Service</label>
+
+						<select name="Service" id="service"  onchange="serviceChangeFunction(this)">
+							<option value="authentication-manager">Authentication Manager</option>
+							<option value="authorization-manager">Authorization Manager</option>
+							<option value="user-manager">User Manager</option>
+						</select>
+					</div>
+				</div>
+			</div>
             <div class="omnibar">
 
-                <label for="omnibar">omnibar</label>
-
-                <select name="omnibar" id="omnibar">
-                    <option value="authentication-manager">Authentication Manager</option>
-                    <option value="authorization-manager">Authorization Manager</option>
-                    <option value="user-manager">User Manager</option>
-                </select>
 
             </div>
+			<br/>
+			<br/>
             <div id="chartContainer" style="height: 300px; width: 100%;"></div>
         </div>
     </div>

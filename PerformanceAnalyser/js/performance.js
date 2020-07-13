@@ -152,6 +152,39 @@ window.onload = function () {
 
 }
 
+function serviceChangeFunction(selectObject) {
+	var serviceName = selectObject.value;
+    var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        theme: "light2",
+        title: {
+            text: serviceName
+        },
+        axisY: {
+            includeZero: false
+        },
+        data: [{
+            type: "line",
+            indexLabelFontSize: 16,
+            dataPoints: [
+                {y: 450},
+                {y: 414},
+                {y: 520, indexLabel: "\u2191 highest", markerColor: "red", markerType: "triangle"},
+                {y: 460},
+                {y: 450},
+                {y: 500},
+                {y: 480},
+                {y: 480},
+                {y: 410, indexLabel: "\u2193 lowest", markerColor: "DarkSlateGrey", markerType: "cross"},
+                {y: 500},
+                {y: 480},
+                {y: 510}
+            ]
+        }]
+    });
+    chart.render();
+}
+
 $("#dashboardTab").click(function getLastRunDetails() {
     lastRun = {"runBy": "Abc pqr", "runDate": "Jul 8, 2020 1:04:09 PM Jul 8, 2020 2:06:09 PM (1h 2m )", "decision": "Success"};
     $("#runBy").text("Run By      : " + lastRun.runBy);
