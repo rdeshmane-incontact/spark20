@@ -1,4 +1,4 @@
-$("#dashboardTab").click(function getLastRunDetails() {
+function getLastRunDetails() {
     lastRun =
         {
             "runBy": "Nidhi Morolia",
@@ -12,4 +12,6 @@ $("#dashboardTab").click(function getLastRunDetails() {
     $("#runEndTime").text("Run End Time    : " + lastRun.endTime);
     $("#runDuration").text("Run Duration    : " + lastRun.runDuration);
     $("#decision").text("Result       : " + lastRun.decision);
-});
+}
+$("#dashboardTab").click(getLastRunDetails());
+

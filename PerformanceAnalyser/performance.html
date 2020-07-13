@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<script>
+    $("#microservice").load("microservice.html");
+    $("#component").load("component.html");
+    $("#gatling").load("gatling.html");
+</script>
 <body>
 <div class="performanceTab">
     <div class="row top-container">
@@ -23,13 +28,13 @@
     <table>
         <tr>
             <td>
-                <button class="tablinks" onclick="openTab(event,'microservice','L2')">Microservice</button>
+                <button id="microserviceTab" class="performancetablinks" onclick="openTab(event,'microservice','L2')">Microservice</button>
             </td>
             <td>
-                <button class="tablinks" onclick="openTab(event,'component','L2')">Components</button>
+                <button id="componentTab" class="performancetablinks" onclick="openTab(event,'component','L2')">Components</button>
             </td>
             <td>
-                <button class="tablinks" onclick="openTab(event,'gatling', 'L2')">Gatlin Report</button>
+                <button id="gatlingTab"class="performancetablinks" onclick="openTab(event,'gatling', 'L2')">Gatling Report</button>
             </td>
         </tr>
     </table>
